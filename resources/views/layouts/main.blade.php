@@ -233,7 +233,7 @@
 
         <!-- Icon Cards -->
         <div class="row">
-          
+          @yield('content')
         </div>
 
       </div>
