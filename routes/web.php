@@ -15,13 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello/{nama?}',function($nama='default'){
-
+/*Route::get('/hello/{nama?}',function($nama='default'){
     return view('hello',array('nama'=>$nama));
     //return view('hello')->with('nama',$nama);
-});
+});*/
 
-Route::get('/sample',function(){
+
+Route::get('/hello/{nama?}','HelloController@index');
+Route::get('/show','HelloController@show');
+
+/*Route::get('/sample',function(){
     $data = ['nama'=>'Erick Kurniawan','alamat'=>'jogja'];
     return view('hello')->with($data);
-});
+});*/
