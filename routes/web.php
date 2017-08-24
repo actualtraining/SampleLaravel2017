@@ -28,9 +28,16 @@ Route::post('/tampil','HelloController@HitungLuas')->name('tampil');
 //routing database
 Route::get('db', function () {
     //return DB::select('select * from todo_lists');
-    //return DB::table('todo_lists')->orderBy('name')->get();
-    $user = DB::table('todo_lists')->where('id',1)->first();
-    return json_encode($user);
+    //$todo_lists = DB::table('todo_lists')->orderBy('name')->get();
+    //return json_encode($todo_lists);
+    //$user = DB::table('todo_lists')->where('id',1)->first();
+    //return json_encode($user);
+
+    //DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle'])
+    //DB::table('todo_lists')->insert([["name"=>"Belajar Eloquent"]]);
+    //DB::table('todo_lists')->where('id',1)->update(["name"=>"Belajar Update"]);
+    DB::table('todo_lists')->where('id',1)->delete();
+    return DB::table('todo_lists')->get();
 });
 
 Route::resource('todos', 'TodoListController');
