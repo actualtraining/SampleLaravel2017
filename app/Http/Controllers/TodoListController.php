@@ -13,7 +13,7 @@ class TodoListController extends Controller
      */
     public function index()
     {
-        //
+        return "Hello todos Controller !";
     }
 
     /**

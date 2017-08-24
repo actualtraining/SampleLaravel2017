@@ -25,6 +25,14 @@ Route::get('/hello/{nama?}','HelloController@index');
 Route::get('/show','HelloController@show');
 Route::post('/tampil','HelloController@HitungLuas')->name('tampil');
 
+//routing database
+Route::get('db', function () {
+    //return DB::select('select * from todo_lists');
+    //return DB::table('todo_lists')->orderBy('name')->get();
+    $user = DB::table('todo_lists')->where('id',1)->first();
+    return json_encode($user);
+});
+
 Route::resource('todos', 'TodoListController');
 /*Route::get('/sample',function(){
     $data = ['nama'=>'Erick Kurniawan','alamat'=>'jogja'];
