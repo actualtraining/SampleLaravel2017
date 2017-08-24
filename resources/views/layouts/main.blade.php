@@ -12,16 +12,16 @@
     <title>SB Admin - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('startbootstrap/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('startbootstrap/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Plugin CSS -->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="{{ asset('startbootstrap/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="{{ asset('startbootstrap/css/sb-admin.css') }}" rel="stylesheet">
 
   </head>
 
@@ -269,18 +269,12 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="{{ asset('startbootstrap/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('startbootstrap/vendor/popper/popper.min.js') }}"></script>
+    <script src="{{ asset('startbootstrap/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="{{ asset('startbootstrap/js/sb-admin.min.js') }}"></script>
 
   </body>
 
