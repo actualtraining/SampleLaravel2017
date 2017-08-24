@@ -23,7 +23,9 @@ Route::get('/', function () {
 
 Route::get('/hello/{nama?}','HelloController@index');
 Route::get('/show','HelloController@show');
+Route::post('/tampil','HelloController@HitungLuas')->name('tampil');
 
+Route::resource('todos', 'TodoListController');
 /*Route::get('/sample',function(){
     $data = ['nama'=>'Erick Kurniawan','alamat'=>'jogja'];
     return view('hello')->with($data);

@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="col-md-12">
-   <form method="POST" action="{{ action('HelloController@HitungLuas') }}">
+   <form method="POST" action="{{ route('tampil') }}">
         {{ csrf_field() }}
         <label for="alas">Alas :</label><br>
         <input type="number" name="alas" /><br><br>
