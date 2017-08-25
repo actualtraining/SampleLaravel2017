@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Facades\Auth;
 use Illuminate\Http\Request;
 
 class TodoListController extends Controller
@@ -11,9 +11,10 @@ class TodoListController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return "Hello todos Controller !";
+        $todo_lists = TodoList::all()->orderBy('name','desc');
+        return ('todos.index')->with('todo_lists',$todo_lists);
     }
 
     /**

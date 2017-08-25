@@ -45,3 +45,5 @@ Route::resource('todos', 'TodoListController');
     $data = ['nama'=>'Erick Kurniawan','alamat'=>'jogja'];
     return view('hello')->with($data);
 });*/
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
