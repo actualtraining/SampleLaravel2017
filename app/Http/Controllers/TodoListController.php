@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Facades\Auth;
+
 use Illuminate\Http\Request;
+//use App\TodoList;
+use App\BLL\TodoListBLL;
 
 class TodoListController extends Controller
 {
@@ -11,10 +13,15 @@ class TodoListController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $todo_lists = TodoList::all()->orderBy('name','desc');
-        return ('todos.index')->with('todo_lists',$todo_lists);
+        //$todoBLL = new TodoListBLL();
+        //$todo_lists = $todoBLL->GetAll();
+        
+        $todo_lists = TodoListBLL::GetAllOrderAsc();
+        
+        //$todo_lists = TodoList::orderBy('name','asc')->get();
+        return view('todos.index')->with('todo_lists',$todo_lists);
     }
 
     /**
